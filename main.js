@@ -42,14 +42,18 @@
             if(att < 100){
                 return mods;
             }else{
-                return "Choose a different point value";
+                return false;
             }
         }
 
         function displayMods(){
             let max = document.getElementById("points").value;
             let drawnMods = randMods(max);
-            document.getElementById("display").innerHTML = drawnMods.join(" | ");
+            if(drawnMods==false){
+                document.getElementById("display").innerHTML = "Choose a different point value";
+            }else{
+                document.getElementById("display").innerHTML = drawnMods.join(" | ");
+            }
         }
         
         function excludeMods(id){

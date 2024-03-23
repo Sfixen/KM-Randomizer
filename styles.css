@@ -8,7 +8,12 @@ body{
     color: #98222C;
     background-color: #000208;
 }
+input[type=checkbox]{
+    width: 30px;
+    height: 30px;
+}
 input[type=number]{
+    font-family: Marksman;
     outline: none;
     color: #98222C;
     background-color: #000208;
@@ -24,8 +29,10 @@ button{
     margin-top: 5px;
     width: 200px;
     height: 100px;
-    font-size: 20px;
 }
 b{
     font-size: 40px;
+}
+img{
+    filter: invert(16%) sepia(87%) saturate(2435%) hue-rotate(339deg) brightness(84%) contrast(91%);
 }
