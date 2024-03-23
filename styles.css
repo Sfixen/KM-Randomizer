@@ -1,9 +1,4 @@
-@font-face {
-    font-family: Marksman;
-    src: url(Marksman.otf);
-}
 body{
-    font-family: Marksman;
     color: #98222C;
     background-color: #000208;
 }
@@ -16,7 +11,6 @@ input[type=number]{
     width: 50px;
 }
 button{
-    font-family: Marksman;
     background-color: #000208;
     color: #98222C;
     border: solid #98222C;
