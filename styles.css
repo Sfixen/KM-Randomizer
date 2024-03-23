@@ -4,6 +4,7 @@
 }
 body{
     font-family: Marksman;
+    font-size: 30px;
     color: #98222C;
     background-color: #000208;
 }
@@ -26,5 +27,5 @@ button{
     font-size: 20px;
 }
 b{
-    font-size: 20px;
+    font-size: 40px;
 }
