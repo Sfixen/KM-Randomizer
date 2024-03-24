@@ -1,38 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscryption Modifier Randomizer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <link rel="stylesheet" href="styles.css">
 <body>
-    <div id="checkbox">
-        <b>EXCLUDED MODIFIERS:</b> <br>
-        <form autocomplete="off">
-          <input type="checkbox" id="c0" onclick="excludeMods(0);"> No Hook <br>
-          <input type="checkbox" id="c1" onclick="excludeMods(1);"> Smaller Backpack <br>
-          <input type="checkbox" id="c2" onclick="excludeMods(2);"> No Clover <br>
-          <input type="checkbox" id="c3" onclick="excludeMods(3);"> Pricey Pelts <br>
-          <input type="checkbox" id="c4" onclick="excludeMods(4);"> Boss Totems <br>
-          <input type="checkbox" id="c5" onclick="excludeMods(5);"> Tipped Scales <br>
-          <input type="checkbox" id="c6" onclick="excludeMods(6);"> All Totem Battles <br>
-          <input type="checkbox" id="c7" onclick="excludeMods(7);"> No Boss Rares <br>
-          <input type="checkbox" id="c8" onclick="excludeMods(8);"> More Difficult I <br>
-          <input type="checkbox" id="c9" onclick="excludeMods(9);"> More Difficult II <br>
-          <input type="checkbox" id="c10" onclick="excludeMods(10);"> Single Candle <br>
-          <input type="checkbox" id="c11" onclick="excludeMods(11);"> Annoying Starters <br>
-          <input type="checkbox" id="c12" onclick="excludeMods(12);"> Squirrel Fish <br>
-          <input type="checkbox" id="c13" onclick="excludeMods(13);"> Grizzly Bosses <br>
-          <input type="checkbox" id="c14" onclick="excludeMods(14);"> Final Boss <br>
-        </form>
-    </div>
-    <div id="randomizer">
-        <b>POINTS:</b> <input type="number" id="points" min="5" max="250" step="5" onKeyDown="return false" style="font-size: 30px;"><br>
-        <button onclick="displayMods();"><b>RANDOMIZE</b></button>
-    </div>
-    <div id="display"></div>
+  <table>
+    <tr>
+      <td colspan="9" class="bigText">
+        Inscryption Kaycee's Mod Randomizer
+      </td>
+    </tr>
+    <tr class="name">
+      <td rowspan="3" class="left">
+        POINTS<br>
+        <input type="number" id="points" min="5" max="250" step="5" onKeyDown="return false" style="width: 50px;">
+      </td>
+      <td>
+        No Hook
+      </td>
+      <td>
+        No Clover
+      </td>
+      <td>
+        Boss Totems
+      </td>
+      <td>
+        All Totem Battles
+      </td>
+      <td>
+        More Difficult
+      </td>
+      <td>
+        Single Candle
+      </td>
+      <td>
+        Squirrel Fish
+      </td>
+      <td rowspan="2" class="name">
+        Final Boss
+      </td>
+    </tr>
 
-    <script src="main.js"></script>
+    <tr class="icon">
+      <td>
+        <img src="Images/Ascensionicon_nohook.png" alt="nohook">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_clover.png" alt="clover">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_bosstotems.png" alt="bosstotems">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_totems.png" alt="totems">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_basedifficulty_(1).png" alt="basedifficulty">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_1life.png" alt="1life">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_squirrelfish.png" alt="squirrelfish">
+      </td>
+    </tr>
+
+    <tr class="radio">
+      <td>
+        <form>
+          <input type="radio" id="exc0" name="radio0" value="0">
+          <label for="exc0">Exclude</label>
+          <input type="radio" id="inc0" name="radio0" value="1">
+          <label for="inc0">Include</label>
+          <input type="radio" id="none0" name="radio0" value="2">
+          <label for="none0">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc1" name="radio1" value="0">
+          <label for="exc1">Exclude</label>
+          <input type="radio" id="inc1" name="radio1" value="1">
+          <label for="inc1">Include</label>
+          <input type="radio" id="none1" name="radio1" value="2">
+          <label for="none1">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc2" name="radio2" value="0">
+          <label for="exc2">Exclude</label>
+          <input type="radio" id="inc2" name="radio2" value="1">
+          <label for="inc2">Include</label>
+          <input type="radio" id="none2" name="radio2" value="2">
+          <label for="none2">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc3" name="radio3" value="0">
+          <label for="exc3">Exclude</label>
+          <input type="radio" id="inc3" name="radio3" value="1">
+          <label for="inc3">Include</label>
+          <input type="radio" id="none3" name="radio3" value="2">
+          <label for="none3">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc4" name="radio4" value="0">
+          <label for="exc4">Exclude</label>
+          <input type="radio" id="inc4" name="radio4" value="1">
+          <label for="inc4">Include</label>
+          <input type="radio" id="none4" name="radio4" value="2">
+          <label for="none4">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc5" name="radio5" value="0">
+          <label for="exc5">Exclude</label>
+          <input type="radio" id="inc5" name="radio5" value="1">
+          <label for="inc5">Include</label>
+          <input type="radio" id="none5" name="radio5" value="2">
+          <label for="none5">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc6" name="radio6" value="0">
+          <label for="exc6">Exclude</label>
+          <input type="radio" id="inc6" name="radio6" value="1">
+          <label for="inc6">Include</label>
+          <input type="radio" id="none6" name="radio6" value="2">
+          <label for="none6">None</label>
+        </form>
+      </td>
+      <td rowspan="2" class="icon">
+        <img src="Images/Final_Pirate_Boss_challenge_icon.png" alt="pirateboss">
+      </td>
+    </tr>
+
+    <tr class="name">
+      <td rowspan="3" class="left">
+        CLEAR
+      </td>
+      <td>
+        Smaller Backpack
+      </td>
+      <td>
+        Pricey Pelts
+      </td>
+      <td>
+        Tipped Scales
+      </td>
+      <td>
+        No Boss Rares
+      </td>
+      <td>
+        More Difficult
+      </td>
+      <td>
+        Annoying Starters
+      </td>
+      <td>
+        Grizzly Bosses
+      </td>
+    </tr>
+
+    <tr class="icon">
+      <td>
+        <img src="Images/Ascensionicon_backpack.png" alt="backpack">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_expensivepelts.png" alt="expensivepelts">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_scales.png" alt="scales">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_nobossrares.png" alt="nobossrares">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_basedifficulty_(1).png" alt="basedifficulty">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_annoyingstarterdeck.png" alt="annoyingstarterdeck">
+      </td>
+      <td>
+        <img src="Images/Ascensionicon_grizzlies.png" alt="grizzlies">
+      </td>
+      <td rowspan="2" class="radio">
+        <input type="radio" id="exc14" name="radio14" value="0">
+        <label for="exc14">Exclude</label>
+        <input type="radio" id="inc14" name="radio14" value="1">
+        <label for="inc14">Include</label>
+        <input type="radio" id="none14" name="radio14" value="2">
+        <label for="none14">None</label>
+      </td>
+    </tr>
+
+    <tr class="radio">
+      <td>
+        <form>
+          <input type="radio" id="exc7" name="radio7" value="0">
+          <label for="exc7">Exclude</label>
+          <input type="radio" id="inc7" name="radio7" value="1">
+          <label for="inc7">Include</label>
+          <input type="radio" id="none7" name="radio7" value="2">
+          <label for="none7">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc8" name="radio8" value="0">
+          <label for="exc8">Exclude</label>
+          <input type="radio" id="inc8" name="radio8" value="1">
+          <label for="inc8">Include</label>
+          <input type="radio" id="none8" name="radio8" value="2">
+          <label for="none8">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc9" name="radio9" value="0">
+          <label for="exc9">Exclude</label>
+          <input type="radio" id="inc9" name="radio9" value="1">
+          <label for="inc9">Include</label>
+          <input type="radio" id="none9" name="radio9" value="2">
+          <label for="none9">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc10" name="radio10" value="0">
+          <label for="exc10">Exclude</label>
+          <input type="radio" id="inc10" name="radio10" value="1">
+          <label for="inc10">Include</label>
+          <input type="radio" id="none10" name="radio10" value="2">
+          <label for="none10">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc11" name="radio11" value="0">
+          <label for="exc11">Exclude</label>
+          <input type="radio" id="inc11" name="radio11" value="1">
+          <label for="inc11">Include</label>
+          <input type="radio" id="none11" name="radio11" value="2">
+          <label for="none11">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc12" name="radio12" value="0">
+          <label for="exc12">Exclude</label>
+          <input type="radio" id="inc12" name="radio12" value="1">
+          <label for="inc12">Include</label>
+          <input type="radio" id="none12" name="radio12" value="2">
+          <label for="none12">None</label>
+        </form>
+      </td>
+      <td>
+        <form>
+          <input type="radio" id="exc13" name="radio13" value="0">
+          <label for="exc13">Exclude</label>
+          <input type="radio" id="inc13" name="radio13" value="1">
+          <label for="inc13">Include</label>
+          <input type="radio" id="none13" name="radio13" value="2">
+          <label for="none13">None</label>
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="9" class="bigText" onclick="randomize();">
+        RANDOMIZE
+      </td>
+    </tr>
+  </table>
+
+  <div id="display">
+    TEMP!!!
+  </div>
+
+<script src="main.js"></script>
 </body>
 </html>

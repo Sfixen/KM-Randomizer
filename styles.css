@@ -1,38 +1,45 @@
 @font-face {
     font-family: Marksman;
     src: url(Fonts/Marksman.otf);
-}
-body{
+  }
+
+  body{
     font-family: Marksman;
-    font-size: 30px;
-    color: #98222C;
     background-color: #000208;
-}
-input[type=checkbox]{
-    width: 20px;
+    color: #A32632;
+  }
+
+  table, td, th{
+    border: solid #A32632;
+  }
+  table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  td{
+    width: 100px;
+  }
+  tr.radio > td, td.radio{
+    font-size: 20px;
+    height: 40px;
+    text-align: left;
+  }
+  tr.name > td, td.name{
+    font-size: 20px;
     height: 20px;
-}
-input[type=number]{
-    font-family: Marksman;
-    outline: none;
-    color: #98222C;
-    background-color: #000208;
-    border: solid #98222C;
-    margin-bottom: 5px;
-    width: 50px;
-}
-button{
-    font-family: Marksman;
-    background-color: #000208;
-    color: #98222C;
-    border: solid #98222C;
-    margin-top: 5px;
-    width: 200px;
+    text-align: center;
+  }
+  tr.icon > td, td.icon{
     height: 100px;
-}
-b{
-    font-size: 40px;
-}
-img{
-    filter: invert(16%) sepia(87%) saturate(2435%) hue-rotate(339deg) brightness(84%) contrast(91%);
-}
+  }
+  tr.icon > td > img, td.icon{
+    filter: invert(16%) sepia(78%) saturate(2313%) hue-rotate(335deg) brightness(102%) contrast(92%);
+  }
+  tr.name > td.left{
+    font-size: 35px;
+  }
+  .bigText{
+    font-size: 50px;
+    text-align: center;
+  }
