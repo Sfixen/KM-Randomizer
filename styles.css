@@ -1,19 +1,21 @@
-@font-face {
+  /* Font */
+  @font-face {
     font-family: Marksman;
     src: url(Fonts/Marksman.otf);
   }
 
+  /* General Colors and Font */
   body{
     font-family: Marksman;
     background-color: #000208;
     color: #A32632;
   }
 
+  /* Table */
   table, td, th{
     border: solid #A32632;
   }
   table{
-    border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
   }
@@ -33,13 +35,29 @@
   tr.icon > td, td.icon{
     height: 100px;
   }
-  tr.icon > td > img, td.icon{
+  tr.icon > td > img, td.icon > img{
     filter: invert(16%) sepia(78%) saturate(2313%) hue-rotate(335deg) brightness(102%) contrast(92%);
   }
-  tr.name > td.left{
+  tr.name > .mediumText{
+    font-size: 35px;
+  }
+  #pointValue{
+    font-size: 20px;
+    color: #F8FFD1;
+  }
+
+  /* Text Sizes */
+  .mediumText{
     font-size: 35px;
   }
   .bigText{
     font-size: 50px;
     text-align: center;
   }
+  /*.mod0{
+    color: blue;
+    border-color: blue;
+  }
+  tr.icon > td.mod0 > img{
+    filter: invert(100%);
+  }*/

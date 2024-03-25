@@ -14,63 +14,64 @@
       </td>
     </tr>
     <tr class="name">
-      <td rowspan="3" class="left">
+      <td rowspan="3" class="mediumText">
         POINTS<br>
         <input type="number" id="points" min="5" max="250" step="5" onKeyDown="return false" style="width: 50px;">
+        <div id="pointValue"></div>
       </td>
-      <td>
+      <td class="mod0">
         No Hook
       </td>
-      <td>
+      <td class="mod1">
         No Clover
       </td>
-      <td>
+      <td class="mod2">
         Boss Totems
       </td>
-      <td>
+      <td class="mod3">
         All Totem Battles
       </td>
-      <td>
+      <td class="mod4">
         More Difficult
       </td>
-      <td>
+      <td class="mod5">
         Single Candle
       </td>
-      <td>
+      <td class="mod6">
         Squirrel Fish
       </td>
-      <td rowspan="2" class="name">
+      <td rowspan="2" class="name mod14">
         Final Boss
       </td>
     </tr>
 
     <tr class="icon">
-      <td>
+      <td class="mod0">
         <img src="Images/Ascensionicon_nohook.png" alt="nohook">
       </td>
-      <td>
+      <td class="mod1">
         <img src="Images/Ascensionicon_clover.png" alt="clover">
       </td>
-      <td>
+      <td class="mod2">
         <img src="Images/Ascensionicon_bosstotems.png" alt="bosstotems">
       </td>
-      <td>
+      <td class="mod3">
         <img src="Images/Ascensionicon_totems.png" alt="totems">
       </td>
-      <td>
+      <td class="mod4">
         <img src="Images/Ascensionicon_basedifficulty_(1).png" alt="basedifficulty">
       </td>
-      <td>
+      <td class="mod5">
         <img src="Images/Ascensionicon_1life.png" alt="1life">
       </td>
-      <td>
+      <td class="mod6">
         <img src="Images/Ascensionicon_squirrelfish.png" alt="squirrelfish">
       </td>
     </tr>
 
     <tr class="radio">
-      <td>
-        <form>
+      <td class="mod0">
+        <form onclick="radioColor(0);">
           <input type="radio" id="exc0" name="radio0" value="0">
           <label for="exc0">Exclude</label>
           <input type="radio" id="inc0" name="radio0" value="1">
@@ -79,8 +80,8 @@
           <label for="none0">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod1">
+        <form onclick="radioColor(1);">
           <input type="radio" id="exc1" name="radio1" value="0">
           <label for="exc1">Exclude</label>
           <input type="radio" id="inc1" name="radio1" value="1">
@@ -89,8 +90,8 @@
           <label for="none1">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod2">
+        <form onclick="radioColor(2);">
           <input type="radio" id="exc2" name="radio2" value="0">
           <label for="exc2">Exclude</label>
           <input type="radio" id="inc2" name="radio2" value="1">
@@ -99,8 +100,8 @@
           <label for="none2">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod3">
+        <form onclick="radioColor(3);">
           <input type="radio" id="exc3" name="radio3" value="0">
           <label for="exc3">Exclude</label>
           <input type="radio" id="inc3" name="radio3" value="1">
@@ -109,8 +110,8 @@
           <label for="none3">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod4">
+        <form onclick="radioColor(4);">
           <input type="radio" id="exc4" name="radio4" value="0">
           <label for="exc4">Exclude</label>
           <input type="radio" id="inc4" name="radio4" value="1">
@@ -119,8 +120,8 @@
           <label for="none4">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod5">
+        <form onclick="radioColor(5);">
           <input type="radio" id="exc5" name="radio5" value="0">
           <label for="exc5">Exclude</label>
           <input type="radio" id="inc5" name="radio5" value="1">
@@ -129,8 +130,8 @@
           <label for="none5">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod6">
+        <form onclick="radioColor(6);">
           <input type="radio" id="exc6" name="radio6" value="0">
           <label for="exc6">Exclude</label>
           <input type="radio" id="inc6" name="radio6" value="1">
@@ -139,73 +140,75 @@
           <label for="none6">None</label>
         </form>
       </td>
-      <td rowspan="2" class="icon">
+      <td rowspan="2" class="icon mod14">
         <img src="Images/Final_Pirate_Boss_challenge_icon.png" alt="pirateboss">
       </td>
     </tr>
 
     <tr class="name">
-      <td rowspan="3" class="left">
+      <td rowspan="3" class="mediumText" onclick="clearButton();">
         CLEAR
       </td>
-      <td>
+      <td class="mod7">
         Smaller Backpack
       </td>
-      <td>
+      <td class="mod8">
         Pricey Pelts
       </td>
-      <td>
+      <td class="mod9">
         Tipped Scales
       </td>
-      <td>
+      <td class="mod10">
         No Boss Rares
       </td>
-      <td>
+      <td class="mod11">
         More Difficult
       </td>
-      <td>
+      <td class="mod12">
         Annoying Starters
       </td>
-      <td>
+      <td class="mod13">
         Grizzly Bosses
       </td>
     </tr>
 
     <tr class="icon">
-      <td>
+      <td class="mod7">
         <img src="Images/Ascensionicon_backpack.png" alt="backpack">
       </td>
-      <td>
+      <td class="mod8">
         <img src="Images/Ascensionicon_expensivepelts.png" alt="expensivepelts">
       </td>
-      <td>
+      <td class="mod9">
         <img src="Images/Ascensionicon_scales.png" alt="scales">
       </td>
-      <td>
+      <td class="mod10">
         <img src="Images/Ascensionicon_nobossrares.png" alt="nobossrares">
       </td>
-      <td>
+      <td class="mod11">
         <img src="Images/Ascensionicon_basedifficulty_(1).png" alt="basedifficulty">
       </td>
-      <td>
+      <td class="mod12">
         <img src="Images/Ascensionicon_annoyingstarterdeck.png" alt="annoyingstarterdeck">
       </td>
-      <td>
+      <td class="mod13">
         <img src="Images/Ascensionicon_grizzlies.png" alt="grizzlies">
       </td>
-      <td rowspan="2" class="radio">
-        <input type="radio" id="exc14" name="radio14" value="0">
-        <label for="exc14">Exclude</label>
-        <input type="radio" id="inc14" name="radio14" value="1">
-        <label for="inc14">Include</label>
-        <input type="radio" id="none14" name="radio14" value="2">
-        <label for="none14">None</label>
+      <td rowspan="2" class="radio mod14">
+        <form onclick="radioColor(14);">
+          <input type="radio" id="exc14" name="radio14" value="0">
+          <label for="exc14">Exclude</label>
+          <input type="radio" id="inc14" name="radio14" value="1">
+          <label for="inc14">Include</label>
+          <input type="radio" id="none14" name="radio14" value="2">
+          <label for="none14">None</label>
+        </form>
       </td>
     </tr>
 
     <tr class="radio">
-      <td>
-        <form>
+      <td class="mod7">
+        <form onclick="radioColor(7);">
           <input type="radio" id="exc7" name="radio7" value="0">
           <label for="exc7">Exclude</label>
           <input type="radio" id="inc7" name="radio7" value="1">
@@ -214,8 +217,8 @@
           <label for="none7">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod8">
+        <form onclick="radioColor(8);">
           <input type="radio" id="exc8" name="radio8" value="0">
           <label for="exc8">Exclude</label>
           <input type="radio" id="inc8" name="radio8" value="1">
@@ -224,8 +227,8 @@
           <label for="none8">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod9">
+        <form onclick="radioColor(9);">
           <input type="radio" id="exc9" name="radio9" value="0">
           <label for="exc9">Exclude</label>
           <input type="radio" id="inc9" name="radio9" value="1">
@@ -234,8 +237,8 @@
           <label for="none9">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod10">
+        <form onclick="radioColor(10);">
           <input type="radio" id="exc10" name="radio10" value="0">
           <label for="exc10">Exclude</label>
           <input type="radio" id="inc10" name="radio10" value="1">
@@ -244,8 +247,8 @@
           <label for="none10">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod11">
+        <form onclick="radioColor(11);">
           <input type="radio" id="exc11" name="radio11" value="0">
           <label for="exc11">Exclude</label>
           <input type="radio" id="inc11" name="radio11" value="1">
@@ -254,8 +257,8 @@
           <label for="none11">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod12">
+        <form onclick="radioColor(12);">
           <input type="radio" id="exc12" name="radio12" value="0">
           <label for="exc12">Exclude</label>
           <input type="radio" id="inc12" name="radio12" value="1">
@@ -264,8 +267,8 @@
           <label for="none12">None</label>
         </form>
       </td>
-      <td>
-        <form>
+      <td class="mod13">
+        <form onclick="radioColor(13);">
           <input type="radio" id="exc13" name="radio13" value="0">
           <label for="exc13">Exclude</label>
           <input type="radio" id="inc13" name="radio13" value="1">
@@ -281,10 +284,6 @@
       </td>
     </tr>
   </table>
-
-  <div id="display">
-    TEMP!!!
-  </div>
 
 <script src="main.js"></script>
 </body>
