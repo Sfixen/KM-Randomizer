@@ -45,6 +45,8 @@
     font-size: 20px;
     color: #F8FFD1;
   }
+
+  /* Highlight Buttons */
   .highlight{
     user-select: none;
   }
@@ -65,10 +67,3 @@
     font-size: 50px;
     text-align: center;
   }
-  /*.mod0{
-    color: blue;
-    border-color: blue;
-  }
-  tr.icon > td.mod0 > img{
-    filter: invert(100%);
-  }*/

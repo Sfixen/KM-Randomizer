@@ -16,6 +16,8 @@
       Grizzly Bosses - 13
       Final Boss - 14
       */
+
+      //Function for selecting random mods
       function randMods(max){
         let mods = [];
         let val = 0;
@@ -52,33 +54,31 @@
           for(let i=0; i < mods.length; i++){
             modIDs.push(modName.indexOf(mods[i]))
           }
-          console.log(modIDs);
           return modIDs;
         }else{
           return "false";
         }
       }
   
+      //Function thats called when clicking the "randomize" button
       function randomize(){
         clearColor();
         bigCheck();
         let max = document.getElementById("points").value;
         let drawnMods = randMods(max);
-        console.log(drawnMods)
         if(drawnMods=="false"){
             document.getElementById("pointValue").innerHTML = "Choose a different point value!";
         }else{
 
           for(let i=0; i < drawnMods.length; i++){
             applyStyles("#F8FFD1", "invert(93%) sepia(11%) saturate(589%) hue-rotate(28deg) brightness(105%) contrast(103%)", drawnMods[i]);
-            console.log("done")
           }
 
           document.getElementById("pointValue").innerHTML = " ";
-          console.log("displayed!");
         }
       }
   
+      //Function for checking which option is selected in a radio
       function check(id){
         radioID = "radio" + id;
         let radioOptions = document.getElementsByName(radioID);
@@ -100,6 +100,7 @@
         }
       }
   
+      //Function for checking all of the radios
       function bigCheck(){
         excludeList = [];
         includeList = [];
@@ -108,25 +109,23 @@
         }
       }
 
+      //Changing the color of the text and image
       function applyStyles(color, filter, id) {
-        // Select elements with class 'mod'
         const modElements = document.querySelectorAll(`.mod${id}`);
         
-        // Apply styles to elements with class 'mod'
         modElements.forEach(element => {
             element.style.color = color;
             element.style.borderColor = color;
         });
     
-        // Select img elements within td.mod under tr.icon
         const imgElements = document.querySelectorAll(`tr > td.mod${id} > img`);
         
-        // Apply filter style to img elements
         imgElements.forEach(element => {
             element.style.filter = filter;
         });
     }
 
+    //Changes the color of a <td> based on which radio option is selected
       function radioColor(id){
         clearColor();
         radioID = "radio" + id;
@@ -150,6 +149,7 @@
         }
       }
 
+      //Resets the colors back to red
       function clearColor(){
         for(let i=0; i < modName.length; i++){
           let radioOptions = document.getElementsByName(`radio${i}`);
@@ -158,7 +158,7 @@
         }
       }
 
-      //WORKS BUT SOME WEIRD ERROR
+      //Function thats called when the clear button is pressed, sets all radio inputs to option 3 - "none"
       function clearButton(){
         let radios = document.querySelectorAll('input[type="radio"][value="2"]');
         
@@ -168,7 +168,7 @@
         }
       }
       
-  
+      //Arrays
       let modVal = [5, 5, 15, 20, 15, 30, 20, 5, 5, 20, 15, 15, 10, 50, 20];
       let modName = ["No Hook", "No Clover", "Boss Totems", "All Totem Battles", "More Difficult I", "Single Candle", "Squirrel Fish", "Smaller Backpack", "Pricey Pelts", "Tipped Scales", "No Boss Rares", "More Difficult II", "Annoying Starters", "Grizzly Bosses", "Final Boss"];
       let excludeList = [];
