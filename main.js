@@ -159,19 +159,15 @@
       }
 
       //WORKS BUT SOME WEIRD ERROR
-      /*
       function clearButton(){
-          var radios = document.querySelectorAll('input[type="radio"]');
-
-          for (let i=0; i < radios.length; i++) {
-              radios[i].checked = false;
-          }
-
-          for(let i=0; i < radios.length; i++){
-            document.querySelector(`input[name="radio${i}"][value="2"]`).checked = true;
-          }
+        let radios = document.querySelectorAll('input[type="radio"][value="2"]');
+        
+        for (let i = 0; i < radios.length; i++) {
+          radios[i].checked = true;
+          applyStyles("#A32632", "invert(16%) sepia(78%) saturate(2313%) hue-rotate(335deg) brightness(102%) contrast(92%)", i);
+        }
       }
-      */
+      
   
       let modVal = [5, 5, 15, 20, 15, 30, 20, 5, 5, 20, 15, 15, 10, 50, 20];
       let modName = ["No Hook", "No Clover", "Boss Totems", "All Totem Battles", "More Difficult I", "Single Candle", "Squirrel Fish", "Smaller Backpack", "Pricey Pelts", "Tipped Scales", "No Boss Rares", "More Difficult II", "Annoying Starters", "Grizzly Bosses", "Final Boss"];
